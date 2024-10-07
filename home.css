@@ -21,7 +21,7 @@ header{
 .overall{
     margin: auto;
     width : 1300px;
-    background-color: lightpink;
+    background-color: lightblue;
     margin-bottom: 20px;;
 }
 .checks{
@@ -138,7 +138,6 @@ header{
 }
 
 .recipe{
-    border: 2px solid black;
     padding: 2%;
     background-color: transparent;
     height: 375px;
