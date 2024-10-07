@@ -1,0 +1,203 @@
+body{
+    padding: 0;
+    margin: 0
+}
+
+header{
+    border: 2px solid black;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.logo img{ 
+    height: 100px 
+}
+
+.welcome{
+    margin: auto;
+    font-size: 30px;
+}
+
+.overall{
+    margin: auto;
+    width : 1300px;
+    background-color: lightpink;
+    margin-bottom: 20px;;
+}
+.checks{
+   display: flex;
+   margin: auto;
+   width: 525px;
+   /* border: 2px solid red; */
+}
+
+ .filter{
+    /* border: 2px solid purple; */
+    display: block;
+    position: relative;
+    padding-top:4px;
+    padding-left: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 130%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.filter input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    /* height: 0;
+    width: 0; */
+}
+
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+.filter input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.filter input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.filter .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*PROBLEM HERE __________________________________________________________________________________________
+/* .recipe{
+    display: block;}
+
+.overall #desserts:checked ~  .main .recipe:not(.dessert) {
+    display: none;
+}
+#no-dairys:checked ~ .overall .main .recipe:not(.no-dairy){
+    display: none;
+} 
+   __________________________________________________________________________________________________________ */
+
+
+
+
+.main{
+    width: 1300px;
+    display: flex;
+}
+
+.left, .mid, .right{
+    flex-basis: 33%;
+}
+
+.left{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.right{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.mid{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.pic{
+    height: 375px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 2px;
+    border: 2px solid royalblue;
+}
+
+.recipe{
+    border: 2px solid black;
+    padding: 2%;
+    background-color: transparent;
+    height: 375px;
+    font-size: 150%;
+} 
+
+.recipe:hover .inner{
+    transform: rotateY(180deg);
+}
+
+.tiny{
+    height: 70px;
+    float: left;
+    padding: 5px;
+}
+
+.name{
+   font-weight: bold;
+}
+
+.inner{
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.frontcard, .backcard{
+    position: fixed;
+    /* width: 100%;
+    height: 100%; */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.backcard{
+    border: 2px solid royalblue;
+    transform: rotateY(180deg);
+    width: 379px;
+    height: 100%;
+    margin:auto;
+    right: 1px;
+    
+}
+.inner, .frontcard{
+    width: 379px;
+    height: 100%;
+    margin:auto;
+}
+
+.backcard p{
+    padding: 5px;
+}
+
+.backcard a{
+    width: 379px;
+    height: 100%;
+    margin: auto;
+    position:absolute;
+}
+
