@@ -1,0 +1,174 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+body{
+    display:flex;
+    flex-direction: column;
+}
+header{
+    background-color: lavender;
+    display: flex;
+}
+
+.logo { 
+    height: 100px 
+}
+.all{
+    margin-top: 20px;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.maincontent{
+    /* border: 5px solid black; */
+    display: flex;
+    flex-grow: 1;
+}
+
+.right{
+    flex-basis: 73%;
+    /* border: 2px solid purple; */
+}
+
+.left{
+    flex-basis: 27%;
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.bottom{
+    /* border: 2px solid purple; */
+    padding-top: 10px;
+    text-align: center;
+}
+
+.top{
+    margin: auto;
+    font-size: 30px;
+}
+
+.pic img{
+    display: block;
+    border: 3px solid gray;
+    height: 21em;
+    border-radius: 2%;
+    margin:auto;
+    margin-bottom: 5px;
+}
+
+.ingredients{
+    border: 3px solid gray;
+    border-radius: 2%;
+    overflow: auto;
+    width: 25em;
+    position: relative;
+    margin:auto;
+}
+
+.directions{
+    display: block;
+    margin: auto;
+    border: 3px solid gray;
+    border-radius: 2%;
+    width:70%;
+    padding-bottom: 5px;
+}
+
+.ingtop, .steptop{
+    text-align: center;
+    font-size: 170%;
+    border-bottom: 2px solid gray;
+    padding: 2px;
+}
+
+.ingredient,.steps ol, .last{
+    font-size: 130%;
+} 
+
+.ingredlist{
+    padding-left: 2%;
+    padding-top: 2%;;
+}
+
+.related{
+    width: 150px;
+    margin: 2px;
+}
+.relpics{
+    border-top: 2px solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sect{
+    text-align: center;
+    font-size: 135%;
+    text-decoration: underline;
+    margin-top: 3px;
+}
+
+.last{
+    padding-left: 1em;
+}
+
+
+.steps li{
+    padding: 5px;
+}
+
+.nutbut{
+    background-color: aquamarine;
+    color:black;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid gray;
+    cursor: pointer;
+    transition: 0.35s ease-out;
+    display: inline-block;
+}
+
+.nutbut:hover{
+    background-color:  rgb(118, 234, 195);
+}
+
+.nutrition{
+    position:relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.nutrition-content{
+    visibility: hidden;
+    top:50%;
+    position:absolute;
+    opacity: 0%;
+    z-index: 100;
+    background-color: azure;
+    /* min-width: 100%; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: 0.35s ease-out;
+}
+
+.nutrition-content .words{
+    color:black;
+    padding: 12px 16px;
+    /* text-decoration: none; */
+    display: block;
+}
+
+.nutrition:hover .nutrition-content{
+    outline: none;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+.fancy{
+    font-weight: bold;
+}
