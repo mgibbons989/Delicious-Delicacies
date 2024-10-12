@@ -90,20 +90,6 @@ header{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-/*PROBLEM HERE __________________________________________________________________________________________
-/* .recipe{
-    display: block;}
-
-.overall #desserts:checked ~  .main .recipe:not(.dessert) {
-    display: none;
-}
-#no-dairys:checked ~ .overall .main .recipe:not(.no-dairy){
-    display: none;
-} 
-   __________________________________________________________________________________________________________ */
-
-
-
 
 .main{
     width: 1300px;
