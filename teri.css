@@ -190,7 +190,7 @@ header{
     border: 1px solid black;
 }
 
-.nutrition:hover .nutrition-content{
+.nutbut:hover ~ .nutrition-content{
     outline: none;
     visibility: visible;
     opacity: 1;

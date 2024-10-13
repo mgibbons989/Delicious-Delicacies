@@ -182,7 +182,7 @@ header{
     display: block;
 }
 
-.nutrition:hover .nutrition-content{
+.nutbut:hover ~ .nutrition-content{
     outline: none;
     visibility: visible;
     opacity: 1;
