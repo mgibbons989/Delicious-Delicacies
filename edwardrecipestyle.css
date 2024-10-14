@@ -2,7 +2,6 @@ body{
     padding: 0;
     margin: 0;
     font-family: arial;
-    background-color: #F0A0A0;
 }
 
 /*Banner at the top*/
@@ -31,7 +30,7 @@ body{
     margin-left: auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10em;
+    margin-bottom: 12em;
 }
 
 /*Left Side Content*/
@@ -126,7 +125,7 @@ body{
 
 .nutcontbot {
     border-bottom: 1px solid;
-    padding-right: 3em;
+    padding-right: 5em;
     font-weight: bold;
 }
 
