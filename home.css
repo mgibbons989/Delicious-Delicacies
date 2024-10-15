@@ -26,16 +26,14 @@ header{
     margin-bottom: 20px;
 }
 
-/* Custom Checkboxes */
+/* Custom Checkboxes DETAILS IN TERI.CSS*/
 .checks{
    display: flex;
    margin: auto;
    width: 525px;
-   /* border: 2px solid red; */
 }
 
  .filter{
-    /* border: 2px solid purple; */
     display: block;
     position: relative;
     padding-top:4px;
@@ -45,18 +43,12 @@ header{
     margin-top: 10px;
     cursor: pointer;
     font-size: 130%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .filter input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    /* height: 0;
-    width: 0; */
 }
 
 .checkmark {
@@ -89,8 +81,6 @@ header{
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
@@ -121,7 +111,8 @@ header{
     padding-bottom: 2%;
 }
 
-/* Cards and Pictures */
+/* Cards and Pictures 
+Cards from w3schools*/
 
 .pic{
     height: 375px;
@@ -134,7 +125,7 @@ header{
 
 .recipe{
     padding: 2%;
-    background-color: transparent;
+    background-color: transparent;/*nothing there in the middle of flipping*/
     height: 375px;
     font-size: 150%;
 } 
@@ -155,28 +146,25 @@ header{
 
 .inner{
     position: relative;
-    /* width: 100%;
-    height: 100%; */
     transition: transform 0.8s;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /*necessary to have two sides*/
+    /*To my understanding, transform style makes it so that the two sides of the 
+    card can exist on one page, instead of just the front*/
 }
 
 .frontcard, .backcard{
     position: fixed;
-    /* width: 100%;
-    height: 100%; */
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    /*So we can have two sides*/
 }
 
 .backcard{
     border: 2px solid royalblue;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /*Flip effect when no longer hovered over*/
     width: 379px;
     height: 100%;
     margin:auto;
     right: 1px;
-    
 }
 
 .inner, .frontcard{
@@ -190,6 +178,7 @@ header{
 }
 
 .backcard a{
+    /*Changes the link to cover the enter card*/
     width: 379px;
     height: 100%;
     margin: auto;
