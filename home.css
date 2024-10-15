@@ -8,7 +8,7 @@ header{
     display: flex;
     margin-bottom: 20px;
 }
-
+/* Top of Page */
 .logo img{ 
     height: 100px 
 }
@@ -18,12 +18,15 @@ header{
     font-size: 30px;
 }
 
+/* Main content */
 .overall{
     margin: auto;
     width : 1300px;
     background-color: lightblue;
     margin-bottom: 20px;
 }
+
+/* Custom Checkboxes */
 .checks{
    display: flex;
    margin: auto;
@@ -91,6 +94,10 @@ header{
     transform: rotate(45deg);
 }
 
+/* Filter Behavior */
+
+/* Layout Of Main Content */
+
 .main{
     width: 1300px;
     display: flex;
@@ -113,6 +120,8 @@ header{
     padding-top: 2%;
     padding-bottom: 2%;
 }
+
+/* Cards and Pictures */
 
 .pic{
     height: 375px;
@@ -169,6 +178,7 @@ header{
     right: 1px;
     
 }
+
 .inner, .frontcard{
     width: 379px;
     height: 100%;
