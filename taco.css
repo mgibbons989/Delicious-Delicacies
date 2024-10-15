@@ -9,7 +9,7 @@ html, body{
 body{
     display:flex;
     flex-direction: column;
-    background: url(tacobowl.png) no-repeat;
+    background: url(tacopics/tacobowl.png) no-repeat;
     background-size: cover;
 }
 

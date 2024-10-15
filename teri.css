@@ -7,7 +7,7 @@ body{
     display:flex;
     flex-direction: column; /*bottom section can stay at the bottom*/
     /* Flex direction specifies the direction*/
-    background: url(terivariation5.png) no-repeat center; 
+    background: url(teripics/terivariation5.png) no-repeat center; 
     background-size: cover;
 }
 
