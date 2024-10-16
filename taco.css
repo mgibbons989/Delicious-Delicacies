@@ -1,4 +1,23 @@
 /* DETAILS ON TERI.CSS */
+/* Font Import*/
+
+@font-face {
+    font-family: 'merri';
+    src: url(merriweather/Merriweather-Black.ttf);
+ }
+ @font-face {
+    font-family: 'merrireg';
+    src: url(merriweather/Merriweather-Regular.ttf);
+ }
+
+ @font-face {
+    font-family: 'witt';
+    src: url(witt/Wittgenstein-Black.ttf);
+ }
+ @font-face {
+    font-family: 'bebas';
+    src: url(bebas/BebasNeue-Regular.ttf);
+ }
 
 html, body{
     margin: 0;
@@ -26,8 +45,10 @@ header{
 
 .top{
     margin: auto;
-    font-size: 30px;
+    /* font-size: 30px; */
     text-decoration: underline;
+    font-size: 4em;
+    font-family: 'bebas', sans-serif;
 }
 
 /* Layout */
@@ -80,10 +101,12 @@ header{
     border-bottom: 2px solid gray;
     padding: 2px;
     background-color: rgb(165, 237, 205);
+    font-family: 'merri', sans-serif;
 }
 
 .ingredient,.steps ol, .last{
     font-size: 130%;
+    font-family: 'merrireg', sans-serif;
 } 
 
 .ingredlist{
@@ -98,6 +121,8 @@ header{
     position: relative;
     margin:auto;
     background-color: rgb(233, 253, 249);
+
+
 }
 
 .ingredient .shad:hover{
@@ -144,6 +169,7 @@ header{
     font-size: 135%;
     text-decoration: underline;
     margin-top: 3px;
+    font-family: 'merrireg', sans-serif;
 }
 
 .last{
@@ -165,6 +191,8 @@ header{
     border: 2px solid gray;
     cursor: pointer;
     transition: 0.35s ease-out;
+
+    font-family: 'merrireg', sans-serif;
 }
 
 .nutribut:hover{
@@ -186,6 +214,8 @@ header{
     background-color: #d5f7ee;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     transition: 0.35s ease-out;
+
+    font-family: 'merrireg', sans-serif;
 }
 
 .nutrition-content .words{

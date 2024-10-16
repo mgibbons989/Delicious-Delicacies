@@ -1,3 +1,18 @@
+/* Font Import*/
+
+ @font-face {
+    font-family: 'merri';
+    src: url(merriweather/Merriweather-Black.ttf);
+ }
+ @font-face {
+    font-family: 'witt';
+    src: url(witt/Wittgenstein-Black.ttf);
+ }
+ @font-face {
+    font-family: 'bebas';
+    src: url(bebas/BebasNeue-Regular.ttf);
+ }
+
 body,html{
     margin: 0;
     height: 100%;
@@ -10,6 +25,7 @@ header{
     margin-bottom: 20px;
     height: 100px;
 }
+
 /* Top of Page */
 .logo img{ 
     position: absolute;
@@ -17,8 +33,9 @@ header{
 }
 
 .welcome{
+    font-family: 'bebas', sans-serif;
     margin:auto; /*center*/
-    font-size: 2em;
+    font-size: 5em;
     text-decoration: underline;
     color:white
 }
@@ -54,9 +71,7 @@ header{
     /* border: 2px solid pink; */
 }
 
-
 /* Custom Checkboxes DETAILS IN TERI.CSS*/
-
 
  .filter{
     display: block;
@@ -68,6 +83,8 @@ header{
     margin-top: 10px;
     cursor: pointer;
     font-size: 130%;
+
+    font-family: 'merri', sans-serif;
 }
 
 .filter input {
@@ -130,6 +147,7 @@ the sibling combinator to affect the recipe cards in the main div */
     opacity: 0;
     transition: 0.35s ease-out;  /* Makes the div disappear smoothly */
 }
+
 .checks:has(#no-dairy:checked) ~ .main .recipe:not(.no-dairy){
     visibility: hidden;
     opacity: 0;
@@ -148,12 +166,20 @@ Cards from w3schools*/
     border: 3px solid rgb(96, 104, 146);
 }
 
+.rec{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .recipe{
-    padding: 2%;
     background-color: transparent;/*nothing there in the middle of flipping*/
     height: 375px;
     font-size: 150%;
-} 
+    
+    display: inline-block;
+    margin-left: auto;
+    margin-right:auto;
+}
 
 .recipe:hover .inner{
     transform: rotateY(180deg);
@@ -161,12 +187,14 @@ Cards from w3schools*/
 
 .tiny{
     height: 70px;
-    float: left;
-    padding: 5px;
+    /* float: left; */
+    vertical-align:middle;
 }
 
 .name{
-   font-weight: bold;
+    font-family: 'witt', sans-serif;
+    margin: auto;
+    /* border:2px solid black; */
 }
 
 .inner{
@@ -175,6 +203,9 @@ Cards from w3schools*/
     transform-style: preserve-3d; /*necessary to have two sides*/
     /*To my understanding, transform style makes it so that the two sides of the 
     card can exist on one page, instead of just the front*/
+    width: 379px;
+    height: 100%;
+    margin:auto;
 }
 
 .frontcard, .backcard{
@@ -193,8 +224,7 @@ Cards from w3schools*/
 
     background-color: rgb(222, 228, 235);
 }
-
-.inner, .frontcard{
+.frontcard{
     width: 379px;
     height: 100%;
     margin:auto;
