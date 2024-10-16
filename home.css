@@ -1,38 +1,79 @@
-body{
-    padding: 0;
-    margin: 0
+/* Font Import*/
+
+ @font-face {
+    font-family: 'merri';
+    src: url(merriweather/Merriweather-Black.ttf);
+ }
+ @font-face {
+    font-family: 'witt';
+    src: url(witt/Wittgenstein-Black.ttf);
+ }
+ @font-face {
+    font-family: 'bebas';
+    src: url(bebas/BebasNeue-Regular.ttf);
+ }
+
+body,html{
+    margin: 0;
+    height: 100%;
+    background-color: beige;
 }
 
 header{
-    background-color: lavender;
+    background-color: rgb(96, 104, 146);
     display: flex;
     margin-bottom: 20px;
+    height: 100px;
 }
 
+/* Top of Page */
 .logo img{ 
-    height: 100px 
+    position: absolute;
+    height: 100px;
 }
 
 .welcome{
-    margin: auto;
-    font-size: 30px;
+    font-family: 'bebas', sans-serif;
+    margin:auto; /*center*/
+    font-size: 5em;
+    text-decoration: underline;
+    color:white
 }
 
+/* Layout */
 .overall{
     margin: auto;
-    width : 1300px;
-    background-color: lightblue;
-    margin-bottom: 20px;;
-}
-.checks{
-   display: flex;
-   margin: auto;
-   width: 525px;
-   /* border: 2px solid red; */
+    width: 70%;
+    background-color: rgb(167, 167, 146);
+
+    display: flex;
+    flex-direction: column;
+    flex-grow:1;
+
+    /* border: 2px solid red; */
 }
 
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+.left, .mid, .right{
+    /* flex-basis: 33%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /* border: 2px solid pink; */
+}
+
+/* Custom Checkboxes DETAILS IN TERI.CSS*/
+
  .filter{
-    /* border: 2px solid purple; */
     display: block;
     position: relative;
     padding-top:4px;
@@ -42,18 +83,14 @@ header{
     margin-top: 10px;
     cursor: pointer;
     font-size: 130%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
+    font-family: 'merri', sans-serif;
 }
 
 .filter input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    /* height: 0;
-    width: 0; */
 }
 
 .checkmark {
@@ -86,47 +123,39 @@ header{
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-/*PROBLEM HERE __________________________________________________________________________________________
-/* .recipe{
-    display: block;}
 
-.overall #desserts:checked ~  .main .recipe:not(.dessert) {
-    display: none;
-}
-#no-dairys:checked ~ .overall .main .recipe:not(.no-dairy){
-    display: none;
-} 
-   __________________________________________________________________________________________________________ */
-
-
-
-
-.main{
-    width: 1300px;
-    display: flex;
+.checks{
+   display: flex;
+   margin: auto;
 }
 
-.left, .mid, .right{
-    flex-basis: 33%;
+/* Filter Behavior */
+.recipe{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.35s ease-out;
 }
 
-.left{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-.right{
-    padding-top: 2%;
-    padding-bottom: 2%;
+/* The :has class checks if the inner has the relevant information
+I used it to check if the checkboxes with the id had been checked and then used 
+the sibling combinator to affect the recipe cards in the main div */
+
+.checks:has(#dessert:checked) ~ .main .recipe:not(.dessert){
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.35s ease-out;  /* Makes the div disappear smoothly */
 }
 
-.mid{
-    padding-top: 2%;
-    padding-bottom: 2%;
+.checks:has(#no-dairy:checked) ~ .main .recipe:not(.no-dairy){
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.35s ease-out;
 }
+
+/* Cards and Pictures 
+Cards from w3schools*/
 
 .pic{
     height: 375px;
@@ -134,15 +163,23 @@ header{
     margin-left: auto;
     margin-right:auto;
     padding: 2px;
-    border: 2px solid royalblue;
+    border: 3px solid rgb(96, 104, 146);
+}
+
+.rec{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .recipe{
-    padding: 2%;
-    background-color: transparent;
+    background-color: transparent;/*nothing there in the middle of flipping*/
     height: 375px;
     font-size: 150%;
-} 
+    
+    display: inline-block;
+    margin-left: auto;
+    margin-right:auto;
+}
 
 .recipe:hover .inner{
     transform: rotateY(180deg);
@@ -150,40 +187,44 @@ header{
 
 .tiny{
     height: 70px;
-    float: left;
-    padding: 5px;
+    /* float: left; */
+    vertical-align:middle;
 }
 
 .name{
-   font-weight: bold;
+    font-family: 'witt', sans-serif;
+    margin: auto;
+    /* border:2px solid black; */
 }
 
 .inner{
     position: relative;
-    /* width: 100%;
-    height: 100%; */
     transition: transform 0.8s;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /*necessary to have two sides*/
+    /*To my understanding, transform style makes it so that the two sides of the 
+    card can exist on one page, instead of just the front*/
+    width: 379px;
+    height: 100%;
+    margin:auto;
 }
 
 .frontcard, .backcard{
     position: fixed;
-    /* width: 100%;
-    height: 100%; */
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    /*So we can have two sides*/
 }
 
 .backcard{
-    border: 2px solid royalblue;
-    transform: rotateY(180deg);
+    border: 3px solid rgb(96, 104, 146);
+    transform: rotateY(180deg); /*Flip effect when no longer hovered over*/
     width: 379px;
     height: 100%;
     margin:auto;
     right: 1px;
-    
+
+    background-color: rgb(222, 228, 235);
 }
-.inner, .frontcard{
+.frontcard{
     width: 379px;
     height: 100%;
     margin:auto;
@@ -191,9 +232,11 @@ header{
 
 .backcard p{
     padding: 5px;
+    text-align: center;
 }
 
 .backcard a{
+    /*Changes the link to cover the enter card*/
     width: 379px;
     height: 100%;
     margin: auto;
