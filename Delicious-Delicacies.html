@@ -1,0 +1,101 @@
+<!-- Introduction Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Delicacies</title>
+    <link rel = "icon" href = "cookie.png">
+</head>
+<style>
+    @font-face {
+    font-family: 'bebas';
+    src: url(bebas/BebasNeue-Regular.ttf);
+    }
+    @font-face {
+    font-family: 'merri';
+    src: url(merriweather/Merriweather-Black.ttf);
+    }
+    @font-face {
+    font-family: 'merrireg';
+    src: url(merriweather/Merriweather-Regular.ttf);
+    }   
+
+    body
+    {
+        height: 100%;
+        margin:0;
+        background-color: beige;
+        font-family: 'merrireg', sans-serif;
+    }
+
+    header{
+    background-color: rgb(96, 104, 146);
+    display: flex;
+    margin-bottom: 20px;
+    height: 100px;
+}
+    .logo img{ 
+    position: absolute;
+    height: 100px;
+    }
+
+    .welcome{
+    font-family: 'bebas', sans-serif;
+    margin:auto; /*center*/
+    font-size: 5em;
+    text-decoration: underline;
+    color:white
+    }
+
+    .intro{
+        display: block;
+        background-color: rgb(167, 167, 146);
+        border: 2px solid rgb(167, 167, 146);
+        margin: auto;
+        width: 50%;
+        font-size: 150%;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .title{
+        display: block;
+        border-bottom: 2px solid black;
+        text-align: center;
+        font-family: 'merri', sans-serif;
+        padding: 5px;
+    }
+    .bold{
+        font-family: 'merri', sans-serif;
+    }
+</style>
+<body>
+    <header>
+        <div class = "logo">
+            <a href = "homepage.html"><img src = "cookie.png" alt = "cookie logo"></a>
+        </div>
+        <div class = "welcome">
+            Delicious Delicacies
+        </div>
+    </header>
+
+    <div class = "intro">
+        <span class = "title">Project Title: Delicious Delicacies</span>
+        <br>
+        Leader's Name: Madison Gibbons
+        <br>
+        
+        <p>We created a small recipe book with six recipes pages, all personally designed.</p>
+        <div class = "members">
+            <span class = "bold">Team Members:</span><br>
+            Madison Gibbons: Homepage, Two Recipes<br>
+            Tijuan Johnson: Two Recipes<br>
+            Edward Luong: Two Recipes<br>
+        </div>
+        <br>
+        <a href = "homepage.html"> Here's the link to the homepage!</a>
+        
+    </div>
+</body>
+</html>
