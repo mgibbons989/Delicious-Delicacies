@@ -56,10 +56,7 @@ header{
 
 
 /* Custom Checkboxes DETAILS IN TERI.CSS*/
-.checks{
-   display: flex;
-   margin: auto;
-}
+
 
  .filter{
     display: block;
@@ -112,8 +109,32 @@ header{
     transform: rotate(45deg);
 }
 
-/* Filter Behavior */
+.checks{
+   display: flex;
+   margin: auto;
+}
 
+/* Filter Behavior */
+.recipe{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.35s ease-out;
+}
+
+/* The :has class checks if the inner has the relevant information
+I used it to check if the checkboxes with the id had been checked and then used 
+the sibling combinator to affect the recipe cards in the main div */
+
+.checks:has(#dessert:checked) ~ .main .recipe:not(.dessert){
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.35s ease-out;  /* Makes the div disappear smoothly */
+}
+.checks:has(#no-dairy:checked) ~ .main .recipe:not(.no-dairy){
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.35s ease-out;
+}
 
 /* Cards and Pictures 
 Cards from w3schools*/
