@@ -14,7 +14,7 @@ body{
     margin: auto;
     font-size: 30px;
     color:white;
-    margin-left:33%;
+    margin-left:30%;
     
 }
 .main-header{
@@ -44,6 +44,8 @@ h2{
     margin-left:auto;
     margin-right:auto;
     border-style: solid;
+    border-radius: 5px;
+    border-color:white;
     
 }
 
@@ -52,6 +54,9 @@ h2{
     display: flex;
     background-color: lightblue;
     border-style: solid;
+    border-radius: 10px;
+    border-color:white;
+    border-width: 5px;
   }
   .flexF {
     display: flex;
@@ -72,6 +77,8 @@ h2{
     width:300px;
     height:960px;
     border-style: solid;
+    border-radius: 20px;
+    border-color:salmon;
    
 }
 
@@ -79,6 +86,8 @@ h2{
     width: 670px;
     height:620px;
     border-style: solid;
+    border-radius: 20px;
+    border-color:salmon;
     
 }
 
@@ -87,6 +96,11 @@ h2{
     height:190px;
     margin-right:1px;
     border-style: solid;
+}
+
+.fimg:hover{
+  width:220px;
+  height:220px;
 }
 
 li{

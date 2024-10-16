@@ -45,6 +45,8 @@ h2{
     margin-left:auto;
     margin-right:auto;
     border-style: solid;
+    border-radius: 5px;
+    border-color:white;
     
 }
 
@@ -53,6 +55,9 @@ h2{
     display: flex;
     background-color: chocolate;
     border-style: solid;
+    border-radius: 10px;
+    border-color:white;
+    border-width: 5px;
   }
   .flexF {
     display: flex;
@@ -73,6 +78,8 @@ h2{
     width:300px;
     height:500px;
     border-style: solid;
+    border-radius: 20px;
+    border-color:grey;
    
 }
 
@@ -80,6 +87,8 @@ h2{
     width: 650px;
     height:350px;
     border-style: solid;
+    border-radius: 20px;
+    border-color:grey;
     
 }
 
@@ -100,6 +109,12 @@ label:hover {
     background-color: lightblue;
     font-size: 22px;
   }
+
+
+.fimg:hover{
+  width:220px;
+  height:220px;
+}
 
 .dropbtn {
     background-color: lightblue;
