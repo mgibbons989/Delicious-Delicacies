@@ -1,36 +1,64 @@
-body{
-    padding: 0;
-    margin: 0
+body,html{
+    margin: 0;
+    height: 100%;
+    background-color: beige;
 }
 
 header{
-    background-color: lavender;
+    background-color: rgb(96, 104, 146);
     display: flex;
     margin-bottom: 20px;
+    height: 100px;
 }
 /* Top of Page */
 .logo img{ 
-    height: 100px 
+    position: absolute;
+    height: 100px;
 }
 
 .welcome{
-    margin: auto;
-    font-size: 30px;
+    margin:auto; /*center*/
+    font-size: 2em;
+    text-decoration: underline;
+    color:white
 }
 
-/* Main content */
+/* Layout */
 .overall{
     margin: auto;
-    width : 1300px;
-    background-color: lightblue;
-    margin-bottom: 20px;
+    width: 70%;
+    background-color: rgb(167, 167, 146);
+
+    display: flex;
+    flex-direction: column;
+    flex-grow:1;
+
+    /* border: 2px solid red; */
 }
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+.left, .mid, .right{
+    /* flex-basis: 33%; */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    /* border: 2px solid pink; */
+}
+
 
 /* Custom Checkboxes DETAILS IN TERI.CSS*/
 .checks{
    display: flex;
    margin: auto;
-   width: 525px;
 }
 
  .filter{
@@ -86,30 +114,6 @@ header{
 
 /* Filter Behavior */
 
-/* Layout Of Main Content */
-
-.main{
-    width: 1300px;
-    display: flex;
-}
-
-.left, .mid, .right{
-    flex-basis: 33%;
-}
-
-.left{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-.right{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.mid{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
 
 /* Cards and Pictures 
 Cards from w3schools*/
@@ -120,7 +124,7 @@ Cards from w3schools*/
     margin-left: auto;
     margin-right:auto;
     padding: 2px;
-    border: 2px solid royalblue;
+    border: 3px solid rgb(96, 104, 146);
 }
 
 .recipe{
@@ -159,12 +163,14 @@ Cards from w3schools*/
 }
 
 .backcard{
-    border: 2px solid royalblue;
+    border: 3px solid rgb(96, 104, 146);
     transform: rotateY(180deg); /*Flip effect when no longer hovered over*/
     width: 379px;
     height: 100%;
     margin:auto;
     right: 1px;
+
+    background-color: rgb(222, 228, 235);
 }
 
 .inner, .frontcard{
@@ -175,6 +181,7 @@ Cards from w3schools*/
 
 .backcard p{
     padding: 5px;
+    text-align: center;
 }
 
 .backcard a{
